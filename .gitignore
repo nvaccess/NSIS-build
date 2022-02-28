@@ -1,31 +1,27 @@
-# Examples and docs
+## Examples, docs
 NSIS/Docs/
 NSIS/Examples/
-# Graphics are unused by the NVDA installer
-NSIS/Contrib/Graphics/
-# Unused exes
-## Windowed NSIS
+
+## Unused exes
+# Windowed NSIS
 NSIS/makensisw.exe
-## NSIS application
+# NSIS application
 NSIS/NSIS.exe
 NSIS/Bin/GenPat.exe
-## zip2exe extra tool
+# zip2exe extra tool
 NSIS/Bin/zip2exe.exe
 NSIS/Contrib/zip2exe/
-## NVDA uses the Modern UI
+# NVDA uses the Modern UI
 NSIS/Contrib/UIs/default.exe
 NSIS/Contrib/UIs/sdbarker_tiny.exe
-# Unused plugins by NVDA the NVDA installer
+
+## Plugins
+# Remove all plugins by default
 NSIS/Plugins/x86-ansi/
-NSIS/Plugins/x86-unicode/AdvSplash.dll
-NSIS/Plugins/x86-unicode/BgImage.dll
-NSIS/Plugins/x86-unicode/Dialer.dll
-NSIS/Plugins/x86-unicode/InstallOptions.dll
-NSIS/Plugins/x86-unicode/LangDLL.dll
-NSIS/Plugins/x86-unicode/Math.dll
-NSIS/Plugins/x86-unicode/NSISdl.dll
-NSIS/Plugins/x86-unicode/Splash.dll
-NSIS/Plugins/x86-unicode/StartMenu.dll
-NSIS/Plugins/x86-unicode/UserInfo.dll
-NSIS/Plugins/x86-unicode/VPatch.dll
-NSIS/Plugins/x86-unicode/nsExec.dll
+NSIS/Plugins/x86-unicode/
+# Plugins used by NVDA the NVDA installer
+!NSIS/Plugins/x86-unicode/Banner.dll
+!NSIS/Plugins/x86-unicode/nsDialogs.dll
+!NSIS/Plugins/x86-unicode/System.dll
+!NSIS/Plugins/x86-unicode/TypeLib.dll
+
