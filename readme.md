@@ -46,6 +46,8 @@ Consider:
 
 ### Testing the installer
 
+Example: (nvda_snapshot_source-example-5683e66.exe)
+
 **Test all the code pathways for the installer**
 - `--minimal` causes no sound to be played results in an installation
 - no `--minimal` causes the installer sound to be played
@@ -59,7 +61,14 @@ Consider:
   - `--install-silent` results in an installation without NVDA starting afterwards
 - executing the launcher via UI reaches the NVDA dialog
 
-### Testing the uninstaller
+### Testing the uninstaller 
+
+First install NVDA using the installer.
+
+**Finding the uninstaller:**
+- Find uninstall.exe in the NVDA installation folder.
+- Ensure that "Uninstall NVDA" can be found via the Windows search menu.
+- Ensure that NVDA can be found in the Windows uninstaller tool: "Add or Remove programs"
 
 **Test all the code pathways for the uninstaller**
 
