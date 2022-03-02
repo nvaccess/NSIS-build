@@ -15,11 +15,14 @@ a custom installation is created.
 While a custom NSIS installation could be created using the installer,
 to save time a full installation distributed zip is download and extracted.
 Then the contents are filtered by [.gitignore](./.gitignore).
-This creates a functionally similar result as building a custom installation with the installer.
+[.gitignore](./.gitignore) was written to be filter the same contents
+as the NSIS 2.51 custom installation used in older versions of NVDA.
+Additionally, unused exes are also filtered to minimize disk space usage.
 
 **Updating NSIS**
 
 These steps use the root directory of this git submodule as the working directory.
+When developing from the NVDA repository, the working directory for updating NSIS is `include/nsis`.
 
 1. Remove the folder `./NSIS`.
 1. Download the latest `.zip` distribution from [the NSIS sourceforge](https://sourceforge.net/projects/nsis/files/).
@@ -29,7 +32,12 @@ These steps use the root directory of this git submodule as the working director
     - Perform `git add NSIS` to track new files.
     - Update `.gitignore` if necessary.
       - Perform `git diff --stat NSIS`, ensure no unexpected files are being added.
-      - Check `git clean -xdn NSIS`, ensure no unexpected files are being ignored.
+        - Expected new files may include:
+          - graphics
+          - languages
+      - Check `git clean -xdn NSIS`, ensure no unexpected files are being ignored by .gitignore.
+        - This is unlikely unless NVDA requires new features bundled with NSIS.
+        - If building the launcher fails, consider updating .gitignore.
     - Perform `git clean -xdf NSIS`, as fresh clones need to be able to work without ignored files.
 1. From a command prompt at the NVDA repository root, build the launcher:
     - `scons launcher`
