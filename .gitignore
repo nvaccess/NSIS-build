@@ -1,0 +1,26 @@
+## Examples, docs
+NSIS/Docs/
+NSIS/Examples/
+
+## Unused exes
+# Windowed NSIS
+NSIS/makensisw.exe
+# NSIS application
+NSIS/NSIS.exe
+NSIS/Bin/GenPat.exe
+# zip2exe extra tool
+NSIS/Bin/zip2exe.exe
+NSIS/Contrib/zip2exe/
+# NVDA uses the Modern UI
+NSIS/Contrib/UIs/default.exe
+NSIS/Contrib/UIs/sdbarker_tiny.exe
+
+## Plugins
+# Remove all plugins by default
+NSIS/Plugins/x86-ansi/
+NSIS/Plugins/x86-unicode/
+# Plugins used by NVDA the NVDA installer
+!NSIS/Plugins/x86-unicode/Banner.dll
+!NSIS/Plugins/x86-unicode/nsDialogs.dll
+!NSIS/Plugins/x86-unicode/System.dll
+!NSIS/Plugins/x86-unicode/TypeLib.dll
