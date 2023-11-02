@@ -6,7 +6,7 @@ Building NSIS from source is slow, so a prebuilt distribution is used as a depen
 
 ### Current Version
 
-v3.08
+v3.09
 
 ### NSIS
 
@@ -15,7 +15,7 @@ a custom installation is created.
 While a custom NSIS installation could be created using the installer,
 to save time a full installation distributed zip is download and extracted.
 Then the contents are filtered by [.gitignore](./.gitignore).
-[.gitignore](./.gitignore) was written to be filter the same contents
+[.gitignore](./.gitignore) was written to filter the same contents
 as the NSIS 2.51 custom installation used in older versions of NVDA.
 Additionally, unused exes are also filtered to minimize disk space usage.
 
@@ -27,7 +27,7 @@ When developing from the NVDA repository, the working directory for updating NSI
 1. Remove the folder `./NSIS`.
 1. Download the latest `.zip` distribution from [the NSIS sourceforge](https://sourceforge.net/projects/nsis/files/).
     - Example: `nsis-3.08.zip`
-1. Extract the installation to `NSIS`
+1. Extract the installation to `./NSIS`
 1. From git bash:
     - Perform `git add NSIS` to track new files.
     - Update `.gitignore` if necessary.
@@ -59,9 +59,6 @@ Example: (nvda_snapshot_source-example-5683e66.exe)
 **Test all the code pathways for the installer**
 - `--minimal` causes no sound to be played results in an installation
 - no `--minimal` causes the installer sound to be played
-- When running the installer where the system UI is set to "zh-HK", "zh-TW" is instead used as the installer locale language
-  - as zh-HK uses the wrong encoding on Vista/7 (#1596)
-  - as zh-HK is [no longer used](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/available-language-packs-for-windows?view=windows-11#language-packs) in Windows 10+, this should be tested on Windows 7
 
 **Smoke test the installer**
 - via CMD with the flag
@@ -77,12 +74,6 @@ First install NVDA using the installer.
 - Find uninstall.exe in the NVDA installation folder.
 - Ensure that "Uninstall NVDA" can be found via the Windows search menu.
 - Ensure that NVDA can be found in the Windows uninstaller tool: "Add or Remove programs"
-
-**Test all the code pathways for the uninstaller**
-
-- When running the uninstaller where the system UI is set to "zh-HK", "zh-TW" is instead used as the uninstaller locale language
-  - as zh-HK uses the wrong encoding on Vista/7 (#1596)
-  - as zh-HK is [no longer used](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/available-language-packs-for-windows?view=windows-11#language-packs) in Windows 10+, this should be tested on Windows 7
 
 **Smoke test the uninstaller**
 - Executing the uninstaller and completing the un-installation:
