@@ -59,9 +59,6 @@ Example: (nvda_snapshot_source-example-5683e66.exe)
 **Test all the code pathways for the installer**
 - `--minimal` causes no sound to be played results in an installation
 - no `--minimal` causes the installer sound to be played
-- When running the installer where the system UI is set to "zh-HK", "zh-TW" is instead used as the installer locale language
-  - as zh-HK uses the wrong encoding on Vista/7 (#1596)
-  - as zh-HK is [no longer used](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/available-language-packs-for-windows?view=windows-11#language-packs) in Windows 10+, this should be tested on Windows 7
 
 **Smoke test the installer**
 - via CMD with the flag
@@ -77,12 +74,6 @@ First install NVDA using the installer.
 - Find uninstall.exe in the NVDA installation folder.
 - Ensure that "Uninstall NVDA" can be found via the Windows search menu.
 - Ensure that NVDA can be found in the Windows uninstaller tool: "Add or Remove programs"
-
-**Test all the code pathways for the uninstaller**
-
-- When running the uninstaller where the system UI is set to "zh-HK", "zh-TW" is instead used as the uninstaller locale language
-  - as zh-HK uses the wrong encoding on Vista/7 (#1596)
-  - as zh-HK is [no longer used](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/available-language-packs-for-windows?view=windows-11#language-packs) in Windows 10+, this should be tested on Windows 7
 
 **Smoke test the uninstaller**
 - Executing the uninstaller and completing the un-installation:
