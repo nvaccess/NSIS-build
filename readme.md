@@ -6,7 +6,7 @@ Building NSIS from source is slow, so a prebuilt distribution is used as a depen
 
 ### Current Version
 
-v3.08
+v3.09
 
 ### NSIS
 
@@ -15,7 +15,7 @@ a custom installation is created.
 While a custom NSIS installation could be created using the installer,
 to save time a full installation distributed zip is download and extracted.
 Then the contents are filtered by [.gitignore](./.gitignore).
-[.gitignore](./.gitignore) was written to be filter the same contents
+[.gitignore](./.gitignore) was written to filter the same contents
 as the NSIS 2.51 custom installation used in older versions of NVDA.
 Additionally, unused exes are also filtered to minimize disk space usage.
 
@@ -27,7 +27,7 @@ When developing from the NVDA repository, the working directory for updating NSI
 1. Remove the folder `./NSIS`.
 1. Download the latest `.zip` distribution from [the NSIS sourceforge](https://sourceforge.net/projects/nsis/files/).
     - Example: `nsis-3.08.zip`
-1. Extract the installation to `NSIS`
+1. Extract the installation to `./NSIS`
 1. From git bash:
     - Perform `git add NSIS` to track new files.
     - Update `.gitignore` if necessary.
