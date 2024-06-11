@@ -6,7 +6,7 @@ Building NSIS from source is slow, so a prebuilt distribution is used as a depen
 
 ### Current Version
 
-v3.09
+v3.10
 
 ### NSIS
 
