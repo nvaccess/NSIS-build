@@ -6,7 +6,7 @@ Building NSIS from source is slow, so a prebuilt distribution is used as a depen
 
 ### Current Version
 
-v3.10
+v3.11
 
 ### NSIS
 
@@ -26,7 +26,7 @@ When developing from the NVDA repository, the working directory for updating NSI
 
 1. Remove the folder `./NSIS`.
 1. Download the latest `.zip` distribution from [the NSIS sourceforge](https://sourceforge.net/projects/nsis/files/).
-    - Example: `nsis-3.08.zip`
+    - Example: `nsis-3.11.zip`
 1. Extract the installation to `./NSIS`
 1. From git bash:
     - Perform `git add NSIS` to track new files.
